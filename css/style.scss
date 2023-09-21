@@ -1,14 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #F2F2F2;
 }
 
-section {
-    background-color: white;
-}
+// -----------------------------------------------------
+// SECTION HEADER **************************************
+// -----------------------------------------------------
 
 header {
     background-color: #f5d5f6;
+    margin-bottom: 3rem;
+
+    .topbar {
+        background-color: black;
+        text-align: center;
+        color: white;
+        padding: 0.5rem;
+    }
+
+    #cart {
+        float: right;
+
+        padding-top: 1rem;
+        display: flex;
+        align-items: flex-start;
+
+        p {
+            margin-top: 0;
+            padding: 0.5rem;
+        }
+
+        span {
+            display: block;
+            text-align: end;
+            font-weight: bold;
+        }
+
+        i {
+            font-size: 3rem;
+            color: #e4afe2;
+        }
+    }
+
+
 }
 
 .container {
@@ -18,6 +55,7 @@ header {
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 2rem 0;
 
@@ -28,23 +66,173 @@ nav {
     }
 }
 
+// -----------------------------------------------------
+// SECTION SLIDER **************************************
+// -----------------------------------------------------
 #slider {
+    // important! pour définir l'axe 0 lors de la position absolute de l'enfant
+    position: relative;
+    background-color: white;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid rgb(225, 225, 225);
 
-    padding: 2rem 0;
+    margin: 2rem 0;
+    padding: 2rem;
+
+    h2 {
+        position: absolute;
+        font-size: 1rem;
+        padding: 1rem;
+        background-color: rgba(245, 213, 246, 0.7);
+
+        top: 1.2rem;
+        left: 2rem;
+
+        span {
+            font-weight: 400;
+            font-size: 1rem;
+        }
+    }
 
     img {
-        border: 1px solid black;
-        width: 92%;
+        width: 100%;
         height: auto;
     }
 }
 
+// ---------------------------------------------------
+// SECTION SELECT ************************************
+// ---------------------------------------------------
+#select {
+    background-color: white;
+    border: 3px solid rgb(225, 225, 225);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+
+    margin: 2rem 0;
+    padding: 1rem;
+
+    article {
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    h1 {
+        width: 100%;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-family: 'Courgette', cursive;
+    }
+}
+
+// ---------------------------------------------------
+// SECTION NEWS **************************************
+// ---------------------------------------------------
+#news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 2rem 0;
+
+    article {
+        background-color: white;
+        border: 3px solid rgb(225, 225, 225);
+
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        font-family: 'Courgette', cursive;
+        text-align: center;
+
+    }
+
+    h2 {
+        text-align: start;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        padding: 0.5rem 0;
+
+        &:before {
+            content: url('../img/logo4.png');
+            margin: 0 0.5rem;
+        }
+    }
+
+    #new {
+        h2 {
+            background-color: #ca3bbc;
+            color: white;
+        }
+
+        img {
+            // modification de l'image pour coller avec les autres
+            width: 287px;
+            height: 347px;
+        }
+    }
+
+    #best {
+        h2 {
+            background-color: #94b844;
+            color: white;
+        }
+    }
+
+    #crush {
+        h2 {
+            background-color: #4b8ca8;
+            color: white;
+        }
+    }
+}
+
+// ---------------------------------------------------
+// SECTION FOOTER **************************************
+// ---------------------------------------------------
+footer {
+    color: rgb(49, 49, 49);
+}
+
+// ---------------------------------------------------
+// SECTION INFO **************************************
+// ---------------------------------------------------
+#info {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #e4afe2;
+    padding: 1rem;
+
+
+    article {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+// ---------------------------------------------------
+// SECTION BOTTOMBAR *********************************
+// ---------------------------------------------------
 #bottombar {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     background-color: #f5d5f6;
 
     article {
@@ -54,43 +242,5 @@ nav {
             list-style: none;
             padding: 0;
         }
-    }
-}
-
-#info {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #e4afe2;
-    padding: 1rem 0;
-
-    article {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-
-}
-
-#select {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: baseline;
-
-    h1 {
-        width: 100%;
-    }
-}
-
-#news {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: baseline;
-
-    article {
-        border: 1px solid black;
-        display: flex;
-        flex-direction: column;
     }
 }
